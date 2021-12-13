@@ -1,0 +1,33 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        
+        vector<int> result;
+        
+        if(nums.size()>0)
+        {
+        auto itr1 = nums.begin();
+        auto itr2 = nums.begin();
+        
+        
+        while(itr1!=nums.end())
+        {
+            itr2=itr1+1;
+            while(itr2!=nums.end()){
+                
+                if(*itr1+*itr2==target)
+                {
+                    result.push_back(itr1-nums.begin());
+                    result.push_back(itr2-nums.begin());
+                }
+             itr2++;   
+            }
+            itr1++;
+            
+        }
+        
+        
+       }
+     return result;
+    }
+};
